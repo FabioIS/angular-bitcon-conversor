@@ -1,0 +1,17 @@
+<div style="margin-top: 1em; padding: 1em">
+
+  <h2 *ngIf="message === 'Analysis' else home" style="margin-left: 2em">BitCoin Analysis</h2>
+  <ng-template #home>
+    <h2 style="margin-left: 2em">Last 30 days evolution in USD</h2>
+  </ng-template>
+
+  <canvas baseChart height="50%"
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"
+          [plugins]="lineChartPlugins">
+  </canvas>
+</div>

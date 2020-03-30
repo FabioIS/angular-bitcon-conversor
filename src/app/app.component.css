@@ -1,0 +1,47 @@
+.header {
+  height: 80px;
+  padding: .3em;
+  border-bottom: 2px solid black;
+  justify-content: center;
+}
+
+.div1 {
+  display: flex;
+  flex: 1;
+}
+
+.header div {
+  float: left;
+  height: 100%;
+  padding-top: 1.5em;
+  padding-left: 0.5em;
+}
+
+.header img {
+  height: 75px;
+  width: 300px;
+  margin-left: 40px;
+}
+
+.sideNavHeader {
+  text-align: center;
+  font-weight: bold;
+  float: top;
+  padding-top: 10px;
+}
+
+.sideNav {
+  width: 10%;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
+a:hover{
+ color: lightblue;
+}
+a:active{
+  color: aqua;
+}

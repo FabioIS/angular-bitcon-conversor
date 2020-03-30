@@ -1,0 +1,11 @@
+
+  <mat-card>
+    <h3>{{currencyName}}</h3>
+    <mat-card-content>
+      <p *ngIf="currencyName!=='USD' else USD">{{currency}}{{currencySymbol}}</p>
+      <ng-template #USD>
+        <p>{{currencySymbol}}{{currency}}</p>
+      </ng-template>
+    </mat-card-content>
+
+  </mat-card>

@@ -1,0 +1,26 @@
+
+h3{
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid lightgray;
+}
+
+mat-card-content{
+  flex: 1;
+  margin-bottom: 1em;
+}
+
+mat-card-content p{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: right;
+}
+
+mat-card{
+  height: 60px;
+  width: 150px;
+  display:flex;
+  flex-direction: column;
+  margin: 0;
+
+}

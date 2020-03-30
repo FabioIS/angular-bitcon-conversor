@@ -1,0 +1,37 @@
+<div style="float: right">
+  <mat-form-field>
+    <mat-label>Start Date</mat-label>
+    <label>
+      <input matInput #starDateInput="ngModel" [matDatepicker]="startDate" [(ngModel)]="startDateValue" [max]="maxStartDate"
+             [matDatepickerFilter]="dateStartFilter">
+    </label>
+    <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+    <mat-datepicker #startDate></mat-datepicker>
+    <mat-error *ngIf="starDateInput.hasError('matDatepickerMax')">
+      You can´t select a day after today
+    </mat-error>
+    <mat-error *ngIf="starDateInput.hasError('matDatepickerFilter')">
+      {{errorMessage}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>End Date</mat-label>
+    <label>
+      <input matInput #endDateInput="ngModel" [matDatepicker]="endDate" [(ngModel)]="endDateValue" [max]="maxDate"
+             [matDatepickerFilter]="dateEndFilter">
+    </label>
+    <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+    <mat-datepicker #endDate></mat-datepicker>
+    <mat-error *ngIf="endDateInput.hasError('matDatepickerMax')">
+      You can´t select a day after today
+    </mat-error>
+    <mat-error *ngIf="endDateInput.hasError('matDatepickerFilter')">
+      {{errorMessage}}
+    </mat-error>
+  </mat-form-field>
+</div>
+
+<app-graphic [startDate]="startDateValue" [endDate]="endDateValue" message="Analysis"></app-graphic>
+
+
